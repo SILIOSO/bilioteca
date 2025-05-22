@@ -1,0 +1,94 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  background-color: #2c1810;
+  padding: 2rem;
+}
+
+.auth-card {
+  background-color: #e5ddd1;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.user-icon-large {
+  width: 80px;
+  height: 80px;
+  background-color: #4a3527;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.auth-header h2 {
+  color: #4a3527;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #4a3527;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #4a3527;
+  font-size: 1rem;
+}
+
+.form-group input::placeholder {
+  color: #8b7355;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #4a3527;
+  color: #e5ddd1;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #2c1810;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.auth-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.create-account-button {
+  color: #4a3527;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.create-account-button:hover {
+  color: #2c1810;
+  transform: translateY(-2px);
+} 

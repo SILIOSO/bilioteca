@@ -1,0 +1,173 @@
+.reservations-page {
+  padding: 40px 20px;
+  min-height: calc(100vh - 60px);
+  background-color: #2C1810;
+  color: #E6DED1;
+}
+
+.reservations-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reservations-container h1 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #E6DED1;
+}
+
+.empty-reservations {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: rgba(139, 69, 19, 0.2);
+  border-radius: 8px;
+}
+
+.empty-reservations p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.suggestion {
+  color: #d4c8b8;
+  font-size: 16px;
+}
+
+.reservations-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.reservation-card {
+  background-color: rgba(139, 69, 19, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.book-image {
+  width: 100%;
+  height: 200px;
+  background-color: rgba(139, 69, 19, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-cover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4c8b8;
+  font-style: italic;
+}
+
+.reservation-info {
+  flex: 1;
+}
+
+.reservation-info h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #E6DED1;
+}
+
+.author {
+  color: #d4c8b8;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.reservation-dates {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.date-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.date-label {
+  color: #d4c8b8;
+}
+
+.date-value {
+  color: #E6DED1;
+}
+
+.reservation-status {
+  margin-bottom: 15px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-badge.activa {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.status-badge.pendiente {
+  background-color: rgba(241, 196, 15, 0.2);
+  color: #f1c40f;
+}
+
+.status-badge.vencida {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+}
+
+.cancel-button {
+  background-color: transparent;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #e74c3c;
+  color: #E6DED1;
+}
+
+@media (max-width: 768px) {
+  .reservations-page {
+    padding: 20px;
+  }
+
+  .reservations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reservation-card {
+    padding: 15px;
+  }
+
+  .book-image {
+    height: 150px;
+  }
+} 

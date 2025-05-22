@@ -1,0 +1,376 @@
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: #8B4513;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-lines span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #2C1810;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.menu-items a {
+  color: #E6DED1;
+  text-decoration: none;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+}
+
+.menu-items a:hover {
+  background-color: rgba(230, 222, 209, 0.1);
+}
+
+.search-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  background-color: #8B4513;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 900;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #E6DED1;
+  border-radius: 4px;
+  padding: 5px 10px;
+  flex: 0 1 300px;
+}
+
+.search-box input {
+  border: none;
+  background: none;
+  padding: 5px;
+  width: 100%;
+  color: #8B4513;
+}
+
+.search-box input::placeholder {
+  color: #8B4513;
+  opacity: 0.7;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-icon, .cart-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.user-icon img, .cart-icon img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+.categories-dropdown {
+  position: relative;
+  height: 100%;
+}
+
+.categories-dropdown > a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.categories-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2C1810;
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.categories-dropdown:hover .categories-submenu {
+  display: block;
+}
+
+.category-item {
+  position: relative;
+}
+
+.category-item > a {
+  padding: 12px 20px;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid rgba(230, 222, 209, 0.1);
+  text-transform: none;
+}
+
+.subcategories-submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #2C1810;
+  min-width: 200px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.category-item:hover .subcategories-submenu {
+  display: block;
+}
+
+.subcategories-submenu a {
+  padding: 12px 20px;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid rgba(230, 222, 209, 0.1);
+  text-transform: none;
+}
+
+.login-button {
+  margin-left: auto;
+  background-color: #E6DED1;
+  color: #8B4513;
+  padding: 8px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #d4c8b8;
+}
+
+.login-button.hidden {
+  display: none;
+}
+
+.account-circle {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+}
+
+/* Estilo para el contenido principal */
+.main-content {
+  padding: 20px;
+  width: 100%;
+}
+
+.user-profile-link {
+  text-decoration: none;
+  color: #E6DED1;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 100%;
+  transition: background-color 0.3s;
+}
+
+.user-profile-link:hover {
+  background-color: rgba(230, 222, 209, 0.1);
+}
+
+.user-profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #2C1810;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #E6DED1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.logout-button {
+  background-color: transparent;
+  border: 1px solid #E6DED1;
+  color: #E6DED1;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #E6DED1;
+  color: #8B4513;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .menu-icon {
+    display: block;
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  .menu-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .menu-lines span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #E6DED1;
+  }
+
+  .menu-items {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #2C1810;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .menu-items.active {
+    display: flex;
+  }
+
+  .menu-items a {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(230, 222, 209, 0.1);
+    height: auto;
+  }
+
+  .categories-dropdown {
+    width: 100%;
+  }
+
+  .categories-submenu {
+    position: static;
+    display: none;
+    box-shadow: none;
+  }
+
+  .categories-dropdown:hover .categories-submenu {
+    display: none;
+  }
+
+  .categories-dropdown.active .categories-submenu {
+    display: block;
+  }
+
+  .category-item {
+    position: static;
+  }
+
+  .subcategories-submenu {
+    position: static;
+    display: none;
+    box-shadow: none;
+    background-color: rgba(230, 222, 209, 0.05);
+  }
+
+  .category-item:hover .subcategories-submenu {
+    display: none;
+  }
+
+  .category-item.active .subcategories-submenu {
+    display: block;
+  }
+
+  .login-button {
+    margin: 15px 20px;
+    text-align: center;
+    display: block;
+  }
+
+  .search-container {
+    left: 0;
+    padding: 10px;
+  }
+
+  .search-box {
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 60px;
+  }
+
+  .user-profile-link {
+    padding: 0 5px;
+  }
+
+  .user-name {
+    display: none;
+  }
+
+  .user-avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .logout-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+} 

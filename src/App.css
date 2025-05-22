@@ -1,18 +1,3 @@
-
-
-/* App.css */
-/* Estilos globales */
-
-:root {
-  --primary-color: #a97c50;
-  --secondary-color: #e8e1c5;
-  --dark-bg: #472f1a;
-  --light-bg: #e8e1c5;
-  --text-color: #333;
-  --accent-color: #d4af37;
-  --button-color: #d4af37;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -20,460 +5,87 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  color: var(--text-color);
-  background-color: var(--light-bg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #2C1810;
 }
 
 .app {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
-/* Header styles */
-.header {
-  background-color: var(--light-bg);
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.menu-button {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu-icon {
-  display: inline-block;
-  width: 24px;
-  height: 3px;
-  background-color: var(--text-color);
-  position: relative;
-}
-
-.menu-icon::before,
-.menu-icon::after {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 3px;
-  background-color: var(--text-color);
-  left: 0;
-}
-
-.menu-icon::before {
-  top: -8px;
-}
-
-.menu-icon::after {
-  bottom: -8px;
-}
-
-.header-buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.profile-button,
-.reservations-button {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: transparent;
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.profile-icon::before {
-  content: '👤';
-  font-size: 20px;
-}
-
-.reservations-icon::before {
-  content: '📚';
-  font-size: 20px;
-}
-
-/* Categories banner */
-.categories-banner {
-  background-color: var(--dark-bg);
-  padding: 10px 0;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.book-shelf {
-  height: 100px;
-  width: 100%;
-  background-image: url('https://via.placeholder.com/1000x100');
-  background-size: cover;
-  background-position: center;
-}
-
-/* Search Bar */
-.search-bar {
-  flex: 1;
-  max-width: 600px;
-  display: flex;
-  margin: 0 auto;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: white;
-}
-
-.search-input {
-  flex: 1;
-  padding: 10px 15px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-}
-
-.search-button {
-  background: none;
-  border: none;
-  padding: 0 15px;
-  cursor: pointer;
-}
-
-.search-icon::before {
-  content: '🔍';
-  font-size: 18px;
-}
-
-/* Main content */
 .main-content {
   flex: 1;
+  margin-top: 60px;
   padding: 20px;
-  background-color: var(--dark-bg);
+  min-height: calc(100vh - 60px);
+  background-color: #2C1810;
 }
 
-.page-title {
-  color: white;
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 20px;
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.banner-container {
-  padding: 20px 0;
-  margin-bottom: 20px;
+::-webkit-scrollbar-track {
+  background: #2C1810;
 }
 
-/* Book Detail */
-.book-detail {
-  background-color: var(--light-bg);
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.book-detail-container {
-  display: flex;
-  padding: 20px;
-}
-
-.book-cover {
-  flex: 0 0 200px;
-  margin-right: 20px;
-}
-
-.book-image {
-  width: 100%;
-  height: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+::-webkit-scrollbar-thumb {
+  background: #4a3527;
   border-radius: 4px;
 }
 
-.book-info {
-  flex: 1;
+::-webkit-scrollbar-thumb:hover {
+  background: #E6DED1;
 }
 
-.book-title {
-  font-size: 24px;
-  margin-bottom: 15px;
+@media (max-width: 768px) {
+  .main-content {
+    margin-top: 60px;
+  }
 }
 
-.book-metadata {
-  margin-bottom: 20px;
-}
-
-.book-metadata p {
-  margin-bottom: 10px;
-}
-
-.synopsis {
-  margin-top: 15px;
-}
-
-.synopsis-text {
-  font-style: italic;
-  line-height: 1.5;
-}
-
-.reserve-button {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  margin: 20px auto 0;
-  padding: 15px;
-  background-color: var(--button-color);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
+.App {
   text-align: center;
 }
 
-/* Reservations List */
-.reservations-list {
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-}
-
-.reservation-item {
-  background-color: var(--light-bg);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.reservation-link {
-  display: flex;
-  padding: 15px;
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-.reservation-cover {
-  flex: 0 0 80px;
-  margin-right: 15px;
-}
-
-.reservation-image {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
-.reservation-info {
-  flex: 1;
-}
-
-.reservation-title {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.reservation-status {
-  display: flex;
-  gap: 5px;
-  margin-bottom: 10px;
-}
-
-.reservation-dates {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.date-info {
-  display: flex;
-  gap: 5px;
-}
-
-/* Categories List */
-.categories-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 20px;
-}
-
-.category-item {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: var(--text-color);
-  background-color: var(--light-bg);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  height: 100%;
-}
-
-.category-item:hover {
-  transform: translateY(-5px);
-}
-
-.category-image-container {
-  position: relative;
-  padding-bottom: 100%; /* Aspect ratio 1:1 */
-  overflow: hidden;
-}
-
-.category-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.category-name {
-  padding: 15px;
-  text-align: center;
-  font-weight: bold;
-  background-color: var(--light-bg);
-}
-
-/* Book List */
-.book-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 20px;
-}
-
-.book-item {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: var(--text-color);
-  transition: transform 0.3s ease;
-}
-
-.book-item:hover {
-  transform: translateY(-5px);
-}
-
-.book-item .book-cover {
-  margin-right: 0;
-  margin-bottom: 10px;
-}
-
-.book-item .book-title {
-  font-size: 16px;
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 0;
-  background-color: var(--light-bg);
-  border-radius: 4px;
-}
-
-/* Footer */
-.footer {
-  background-color: var(--light-bg);
-  padding: 15px 20px;
-  text-align: center;
-}
-
-.social-links p {
-  margin-bottom: 10px;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.social-icon {
-  width: 40px;
-  height: 40px;
-  display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background-color: var(--dark-bg);
+  font-size: calc(10px + 2vmin);
   color: white;
-  text-decoration: none;
-  font-size: 20px;
 }
 
-.instagram::before {
-  content: '📷';
+.App-link {
+  color: #61dafb;
 }
 
-.whatsapp::before {
-  content: '📱';
-}
-
-.tiktok::before {
-  content: '🎵';
-}
-
-.twitter::before {
-  content: '🐦';
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .book-detail-container {
-    flex-direction: column;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-
-  .book-cover {
-    flex: none;
-    margin-right: 0;
-    margin-bottom: 20px;
-    max-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .reservation-link {
-    flex-direction: column;
-  }
-
-  .reservation-cover {
-    flex: none;
-    margin-right: 0;
-    margin-bottom: 10px;
-    max-width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .reservation-info {
-    text-align: center;
-  }
-
-  .reservation-status,
-  .date-info {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 576px) {
-  .categories-list {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  }
-
-  .book-list {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  }
-
-  .book-item .book-title {
-    font-size: 14px;
+  to {
+    transform: rotate(360deg);
   }
 }

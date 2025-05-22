@@ -1,0 +1,185 @@
+.account-page {
+  padding: 40px 20px;
+  min-height: calc(100vh - 60px);
+  background-color: #2C1810;
+  color: #E6DED1;
+}
+
+.account-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(139, 69, 19, 0.2);
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.account-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(230, 222, 209, 0.1);
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #8B4513;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-picture-placeholder {
+  font-size: 48px;
+  color: #E6DED1;
+  text-transform: uppercase;
+}
+
+.profile-info h1 {
+  color: #E6DED1;
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+
+.member-since {
+  color: #d4c8b8;
+  font-size: 14px;
+}
+
+.account-sections {
+  display: grid;
+  gap: 30px;
+}
+
+.account-section {
+  background-color: rgba(139, 69, 19, 0.3);
+  border-radius: 8px;
+  padding: 25px;
+}
+
+.account-section h2 {
+  color: #E6DED1;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.info-grid {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-item label {
+  color: #d4c8b8;
+  font-size: 14px;
+}
+
+.info-item input {
+  background-color: rgba(230, 222, 209, 0.1);
+  border: 1px solid rgba(230, 222, 209, 0.2);
+  padding: 10px;
+  border-radius: 4px;
+  color: #E6DED1;
+  font-size: 16px;
+}
+
+.edit-button {
+  background-color: #8B4513;
+  color: #E6DED1;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+  background-color: #a05717;
+}
+
+.empty-state {
+  color: #d4c8b8;
+  text-align: center;
+  padding: 30px;
+  font-style: italic;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.favorite-book-card {
+  background: rgba(139, 69, 19, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.favorite-book-card:hover {
+  transform: translateY(-5px);
+}
+
+.favorite-book-card .book-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.favorite-book-card .book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorite-book-card .book-info {
+  padding: 15px;
+}
+
+.favorite-book-card .book-info h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #E6DED1;
+}
+
+.favorite-book-card .book-info .author {
+  margin: 0 0 4px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.favorite-book-card .book-info .category {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.6;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .account-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-container {
+    padding: 20px;
+  }
+} 

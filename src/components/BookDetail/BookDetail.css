@@ -1,0 +1,116 @@
+.book-detail-container {
+  padding: 40px 20px;
+  min-height: calc(100vh - 60px);
+  background-color: #2C1810;
+  color: #E6DED1;
+}
+
+.book-detail-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(139, 69, 19, 0.2);
+  border-radius: 8px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+}
+
+.book-detail-image {
+  width: 100%;
+  height: 400px;
+  background-color: rgba(139, 69, 19, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.book-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.book-detail-info h2 {
+  font-size: 24px;
+  color: #E6DED1;
+  margin: 0;
+}
+
+.book-detail-info h3 {
+  font-size: 18px;
+  color: #d4c8b8;
+  margin: 0;
+}
+
+.book-synopsis {
+  margin-top: 20px;
+}
+
+.book-synopsis h3 {
+  margin-bottom: 10px;
+}
+
+.book-synopsis p {
+  line-height: 1.6;
+  color: #E6DED1;
+}
+
+.reserve-button {
+  background-color: #8B4513;
+  color: #E6DED1;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.reserve-button:hover:not(:disabled) {
+  background-color: #a05717;
+}
+
+.reserve-button.reserved {
+  background-color: #4a3527;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.reserva-exitosa {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.error-message {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .book-detail-card {
+    grid-template-columns: 1fr;
+  }
+
+  .book-detail-image {
+    height: 300px;
+  }
+
+  .book-detail-info {
+    padding: 0;
+  }
+} 
