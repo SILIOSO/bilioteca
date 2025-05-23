@@ -92,6 +92,7 @@ const Home = ({ isAuthenticated }) => {
   return (
     <div className="home">
       <div className="banner">
+        <img src="/images/recien-agregados.jpg" alt="Recién agregados banner" />
         <h1>RECIÉN AGREGADOS</h1>
       </div>
       
