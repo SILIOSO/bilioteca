@@ -9,84 +9,84 @@ export const books = [
     id: 1,
     title: 'Biología Molecular de la Célula',
     author: 'Bruce Alberts',
-    image: '/images/default-book.jpg',
+    image: '/images/biologia.png',
     category: 'Biología Celular'
   },
   {
     id: 2,
     title: 'El Origen de las Especies',
     author: 'Charles Darwin',
-    image: '/images/default-book.jpg',
+    image: '/images/el origen de las especies.webp',
     category: 'Evolución'
   },
   {
     id: 3,
     title: 'Principios de Neurociencia',
     author: 'Eric R. Kandel',
-    image: '/images/default-book.jpg',
+    image: '/images/neurociencia.jpg',
     category: 'Neurobiología'
   },
   {
     id: 4,
     title: 'Genética: Un Enfoque Conceptual',
     author: 'Benjamin A. Pierce',
-    image: '/images/default-book.jpg',
+    image: '/images/genetica.webp',
     category: 'Genética'
   },
   {
     id: 5,
     title: 'Fisiología Humana',
     author: 'Dee Unglaub Silverthorn',
-    image: '/images/default-book.jpg',
+    image: '/images/fisiologia.webp',
     category: 'Fisiología'
   },
   {
     id: 6,
     title: 'Microbiología',
     author: 'Michael T. Madigan',
-    image: '/images/default-book.jpg',
+    image: '/images/microbiologia.webp',
     category: 'Microbiología'
   },
   {
     id: 7,
     title: 'Biología de Campbell',
     author: 'Neil A. Campbell',
-    image: '/images/default-book.jpg',
+    image: '/images/biologia.webp',
     category: 'Biología General'
   },
   {
     id: 8,
     title: 'Atlas de Anatomía Humana',
     author: 'Frank H. Netter',
-    image: '/images/default-book.jpg',
+    image: '/images/atlas.webp',
     category: 'Anatomía'
   },
   {
     id: 9,
     title: 'Bioquímica',
     author: 'Lehninger',
-    image: '/images/default-book.jpg',
+    image: '/images/Bioquimica.jpg',
     category: 'Bioquímica'
   },
   {
     id: 10,
     title: 'Inmunología Celular y Molecular',
     author: 'Abul K. Abbas',
-    image: '/images/default-book.jpg',
+    image: '/images/inmunologia.webp',
     category: 'Inmunología'
   },
   {
     id: 11,
     title: 'Botánica: Introducción a la Biología Vegetal',
     author: 'Jesús Izco',
-    image: '/images/default-book.jpg',
+    image: '/images/botanica.webp',
     category: 'Botánica'
   },
   {
     id: 12,
     title: 'Zoología de los Invertebrados',
     author: 'Richard C. Brusca',
-    image: '/images/default-book.jpg',
+    image: '/images/zoologia.webp',
     category: 'Zoología'
   }
 ];
