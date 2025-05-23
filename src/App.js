@@ -6,6 +6,7 @@ import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import BookDetail from './components/BookDetail/BookDetail';
 import SubcategoryBooks from './components/SubcategoryBooks/SubcategoryBooks';
+import CategoryBooks from './components/CategoryBooks/CategoryBooks';
 import Account from './components/Account/Account';
 import Reservations from './components/Reservations/Reservations';
 import Footer from './components/Footer/Footer';
@@ -125,6 +126,16 @@ function App() {
                 <BookDetail 
                   isAuthenticated={isAuthenticated}
                   onReserve={handleReserveBook}
+                  userData={userData}
+                  onFavoriteToggle={handleFavoriteToggle}
+                />
+              } 
+            />
+            <Route 
+              path="/categoria/:categoria" 
+              element={
+                <CategoryBooks 
+                  isAuthenticated={isAuthenticated} 
                   userData={userData}
                   onFavoriteToggle={handleFavoriteToggle}
                 />
