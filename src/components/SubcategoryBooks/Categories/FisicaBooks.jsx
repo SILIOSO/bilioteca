@@ -8,84 +8,84 @@ export const books = [
     id: 25,
     title: 'Física Universitaria',
     author: 'Young & Freedman',
-    image: '/images/fisica1.webp',
+    image: '/images/default-book.jpg',
     category: 'Física General'
   },
   {
     id: 26,
     title: 'Mecánica Cuántica',
     author: 'Richard Feynman',
-    image: '/images/fisica2.webp',
+    image: '/images/default-book.jpg',
     category: 'Física Cuántica'
   },
   {
     id: 27,
     title: 'Teoría de la Relatividad',
     author: 'Albert Einstein',
-    image: '/images/fisica3.webp',
+    image: '/images/default-book.jpg',
     category: 'Relatividad'
   },
   {
     id: 28,
     title: 'Termodinámica',
     author: 'Yunus A. Cengel',
-    image: '/images/fisica4.png',
+    image: '/images/default-book.jpg',
     category: 'Termodinámica'
   },
   {
     id: 29,
     title: 'Electromagnetismo',
     author: 'David J. Griffiths',
-    image: '/images/fisica5.webp',
+    image: '/images/default-book.jpg',
     category: 'Electromagnetismo'
   },
   {
     id: 30,
     title: 'Física Nuclear',
     author: 'Kenneth S. Krane',
-    image: '/images/fisica6.webp',
+    image: '/images/default-book.jpg',
     category: 'Física Nuclear'
   },
   {
     id: 31,
     title: 'Física de Estado Sólido',
     author: 'Neil W. Ashcroft',
-    image: '/images/fisica1.webp',
+    image: '/images/default-book.jpg',
     category: 'Estado Sólido'
   },
   {
     id: 32,
     title: 'Mecánica Clásica',
     author: 'John R. Taylor',
-    image: '/images/fisica2.webp',
+    image: '/images/default-book.jpg',
     category: 'Mecánica'
   },
   {
     id: 33,
     title: 'Óptica',
     author: 'Eugene Hecht',
-    image: '/images/fisica3.webp',
+    image: '/images/default-book.jpg',
     category: 'Óptica'
   },
   {
     id: 34,
     title: 'Física de Partículas',
     author: 'Martin Thomson',
-    image: '/images/fisica4.png',
+    image: '/images/default-book.jpg',
     category: 'Física de Partículas'
   },
   {
     id: 35,
     title: 'Física Estadística',
     author: 'Frederick Reif',
-    image: '/images/fisica5.webp',
+    image: '/images/default-book.jpg',
     category: 'Física Estadística'
   },
   {
     id: 36,
     title: 'Física Computacional',
     author: 'Nicholas J. Giordano',
-    image: '/images/fisica6.webp',
+    image: '/images/default-book.jpg',
     category: 'Física Computacional'
   }
 ];

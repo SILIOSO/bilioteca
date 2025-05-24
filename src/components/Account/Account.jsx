@@ -19,6 +19,20 @@ const Account = ({ isAuthenticated, userData }) => {
     }
   }).filter(book => book !== null);
 
+  // Obtener préstamos activos (reservas con estado ACTIVA)
+  const activeLoans = (userData?.reservations || []).filter(
+    reservation => reservation.status === 'ACTIVA'
+  );
+
+  // Calcular días restantes para cada préstamo
+  const calculateRemainingDays = (returnDate) => {
+    const today = new Date();
+    const return_date = new Date(returnDate);
+    const diffTime = return_date - today;
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays;
+  };
+
   return (
     <div className="account-page">
       <div className="account-container">
@@ -74,11 +88,33 @@ const Account = ({ isAuthenticated, userData }) => {
 
           <section className="account-section">
             <h2>Préstamos Actuales</h2>
-            {(!userData?.currentLoans || userData.currentLoans.length === 0) ? (
+            {activeLoans.length === 0 ? (
               <p className="empty-state">No tienes libros prestados actualmente</p>
             ) : (
-              <div className="loans-list">
-                {/* Lista de préstamos aquí */}
+              <div className="loans-grid">
+                {activeLoans.map(loan => {
+                  const remainingDays = calculateRemainingDays(loan.returnDate);
+                  return (
+                    <div key={loan.id} className="loan-card">
+                      <div className="book-image">
+                        <img src={loan.book.coverImage} alt={loan.book.title} />
+                      </div>
+                      <div className="loan-info">
+                        <h3>{loan.book.title}</h3>
+                        <p className="author">{loan.book.author}</p>
+                        <p className="dates">
+                          <span>Fecha de préstamo: {new Date(loan.approvalDate).toLocaleDateString()}</span>
+                          <span>Fecha de devolución: {new Date(loan.returnDate).toLocaleDateString()}</span>
+                        </p>
+                        <p className={`remaining-days ${remainingDays < 5 ? 'warning' : ''}`}>
+                          {remainingDays > 0 
+                            ? `${remainingDays} días restantes`
+                            : 'Préstamo vencido'}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             )}
           </section>

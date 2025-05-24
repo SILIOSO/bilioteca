@@ -9,6 +9,7 @@ import SubcategoryBooks from './components/SubcategoryBooks/SubcategoryBooks';
 import CategoryBooks from './components/CategoryBooks/CategoryBooks';
 import Account from './components/Account/Account';
 import Reservations from './components/Reservations/Reservations';
+import AdminPanel from './components/AdminPanel/AdminPanel';
 import Footer from './components/Footer/Footer';
 import { updateUser } from './utils/userService';
 import './App.css';
@@ -50,7 +51,9 @@ function App() {
       },
       reservationDate: new Date().toISOString(),
       returnDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 días
-      status: 'ACTIVA'
+      status: 'PENDIENTE',
+      userName: userData.name,
+      userEmail: userData.email
     };
 
     try {
@@ -164,6 +167,10 @@ function App() {
                   onCancelReservation={handleCancelReservation}
                 />
               } 
+            />
+            <Route 
+              path="/admin" 
+              element={<AdminPanel isAuthenticated={isAuthenticated} userData={userData} />} 
             />
           </Routes>
           <Footer />

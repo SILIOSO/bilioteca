@@ -16,6 +16,22 @@
   padding-bottom: 10px;
 }
 
+.subcategory-section {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.subcategory-section h3 {
+  color: #2c3e50;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
 .books-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -71,4 +87,16 @@
   font-size: 14px;
   margin: 0;
   opacity: 0.8;
+}
+
+.book-info .author {
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.book-info .category {
+  color: #3498db;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
 } 

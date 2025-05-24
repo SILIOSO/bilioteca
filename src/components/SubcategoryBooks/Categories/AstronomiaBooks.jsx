@@ -8,84 +8,84 @@ export const books = [
     id: 37,
     title: 'Cosmos',
     author: 'Carl Sagan',
-    image: '/images/astronomia1.webp',
+    image: '/images/default-book.jpg',
     category: 'Astronomía General'
   },
   {
     id: 38,
     title: 'Astrofísica para Gente con Prisa',
     author: 'Neil deGrasse Tyson',
-    image: '/images/astronomia2.webp',
+    image: '/images/default-book.jpg',
     category: 'Astrofísica'
   },
   {
     id: 39,
     title: 'Breve Historia del Tiempo',
     author: 'Stephen Hawking',
-    image: '/images/astronomia3.jpg',
+    image: '/images/default-book.jpg',
     category: 'Cosmología'
   },
   {
     id: 40,
     title: 'Manual de Astronomía Práctica',
     author: 'Antonio Arias',
-    image: '/images/astronomia4.webp',
+    image: '/images/default-book.jpg',
     category: 'Astronomía Práctica'
   },
   {
     id: 41,
     title: 'Guía del Sistema Solar',
     author: 'Marcus Chown',
-    image: '/images/astronomia5.jpg',
+    image: '/images/default-book.jpg',
     category: 'Sistema Solar'
   },
   {
     id: 42,
     title: 'Evolución Estelar',
     author: 'Martin Rees',
-    image: '/images/astronomia6.jpg',
+    image: '/images/default-book.jpg',
     category: 'Astrofísica Estelar'
   },
   {
     id: 43,
     title: 'Agujeros Negros y Tiempo-Espacio',
     author: 'Kip S. Thorne',
-    image: '/images/astronomia1.webp',
+    image: '/images/default-book.jpg',
     category: 'Relatividad General'
   },
   {
     id: 44,
     title: 'Atlas de las Constelaciones',
     author: 'José Luis Comellas',
-    image: '/images/astronomia2.webp',
+    image: '/images/default-book.jpg',
     category: 'Astronomía Observacional'
   },
   {
     id: 45,
     title: 'Galaxias y Estructura Cósmica',
     author: 'Linda S. Sparke',
-    image: '/images/astronomia3.jpg',
+    image: '/images/default-book.jpg',
     category: 'Astronomía Galáctica'
   },
   {
     id: 46,
     title: 'Planetas Extrasolares',
     author: 'Michael Perryman',
-    image: '/images/astronomia4.webp',
+    image: '/images/default-book.jpg',
     category: 'Exoplanetas'
   },
   {
     id: 47,
     title: 'Radioastronomía',
     author: 'Bernard F. Burke',
-    image: '/images/astronomia5.jpg',
+    image: '/images/default-book.jpg',
     category: 'Radioastronomía'
   },
   {
     id: 48,
     title: 'Astrobiología',
     author: 'Charles S. Cockell',
-    image: '/images/astronomia6.jpg',
+    image: '/images/default-book.jpg',
     category: 'Astrobiología'
   }
 ];

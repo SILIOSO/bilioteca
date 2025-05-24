@@ -252,6 +252,18 @@
   color: #8B4513;
 }
 
+.admin-link {
+  background-color: #2C1810;
+  margin: 0 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease !important;
+}
+
+.admin-link:hover {
+  background-color: #4a3527 !important;
+  transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 0;

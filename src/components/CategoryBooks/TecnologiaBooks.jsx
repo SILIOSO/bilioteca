@@ -10,11 +10,19 @@ const TecnologiaBooks = ({ isAuthenticated, userData, onFavoriteToggle }) => {
   const navigate = useNavigate();
   const defaultBookCover = '/images/default-book.jpg';
 
-  // Combinar todos los libros de tecnología
-  const allTechnologyBooks = [
-    ...informaticaBooks,
-    ...roboticaBooks,
-    ...electronicaBooks
+  const subcategories = [
+    {
+      title: 'INFORMÁTICA',
+      books: informaticaBooks
+    },
+    {
+      title: 'ROBÓTICA',
+      books: roboticaBooks
+    },
+    {
+      title: 'ELECTRÓNICA',
+      books: electronicaBooks
+    }
   ];
 
   const handleBookClick = (bookId) => {
@@ -26,41 +34,45 @@ const TecnologiaBooks = ({ isAuthenticated, userData, onFavoriteToggle }) => {
   };
 
   return (
-    <div className="subcategory-container">
-      <h1 className="subcategory-title">TECNOLOGÍA</h1>
-      <div className="books-grid">
-        {allTechnologyBooks.map((book) => (
-          <div 
-            key={book.id} 
-            className="book-card"
-            onClick={() => handleBookClick(book.id)}
-          >
-            <div className="book-image">
-              <img 
-                src={book.image} 
-                alt={book.title}
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = defaultBookCover;
-                }}
-              />
-              {isAuthenticated && (
-                <FavoriteButton
-                  bookId={book.id}
-                  isFavorite={userData?.favorites?.includes(book.id)}
-                  userEmail={userData?.email}
-                  onToggle={onFavoriteToggle}
-                />
-              )}
-            </div>
-            <div className="book-info">
-              <h3>{book.title}</h3>
-              <p className="author">{book.author}</p>
-              <p className="category">{book.category}</p>
-            </div>
+    <div className="categories-container">
+      {subcategories.map((subcategory) => (
+        <div key={subcategory.title} className="subcategory-section">
+          <h2>{subcategory.title}</h2>
+          <div className="books-grid">
+            {subcategory.books.map((book) => (
+              <div 
+                key={book.id} 
+                className="book-card"
+                onClick={() => handleBookClick(book.id)}
+              >
+                <div className="book-image">
+                  <img 
+                    src={book.image} 
+                    alt={book.title}
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = defaultBookCover;
+                    }}
+                  />
+                  {isAuthenticated && (
+                    <FavoriteButton
+                      bookId={book.id}
+                      isFavorite={userData?.favorites?.includes(book.id)}
+                      userEmail={userData?.email}
+                      onToggle={onFavoriteToggle}
+                    />
+                  )}
+                </div>
+                <div className="book-info">
+                  <h3>{book.title}</h3>
+                  <p className="author">{book.author}</p>
+                  <p className="category">{book.category}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

@@ -18,6 +18,8 @@ const Navbar = ({ isAuthenticated, userData, onLogout }) => {
     navigate('/');
   };
 
+  const isAdmin = userData?.email === 'cazador7676@gmail.com';
+
   const categories = {
     ciencia: {
       name: 'Ciencia',
@@ -90,6 +92,11 @@ const Navbar = ({ isAuthenticated, userData, onLogout }) => {
             <Link to="/cuenta" onClick={handleLinkClick}>
               Mi Cuenta
             </Link>
+            {isAdmin && (
+              <Link to="/admin" onClick={handleLinkClick} className="admin-link">
+                Admin
+              </Link>
+            )}
           </>
         )}
       </div>

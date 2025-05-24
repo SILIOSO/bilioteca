@@ -8,84 +8,84 @@ export const books = [
     id: 13,
     title: 'Química Orgánica',
     author: 'John McMurry',
-    image: '/images/quimica1.webp',
+    image: '/images/default-book.jpg',
     category: 'Química Orgánica'
   },
   {
     id: 14,
     title: 'Principios de Química',
     author: 'Peter Atkins',
-    image: '/images/quimica2.webp',
+    image: '/images/default-book.jpg',
     category: 'Química General'
   },
   {
     id: 15,
     title: 'Química Inorgánica',
     author: 'Catherine Housecroft',
-    image: '/images/quimica3.jpg',
+    image: '/images/default-book.jpg',
     category: 'Química Inorgánica'
   },
   {
     id: 16,
     title: 'Química Analítica',
     author: 'Daniel C. Harris',
-    image: '/images/quimica4.jpg',
+    image: '/images/default-book.jpg',
     category: 'Química Analítica'
   },
   {
     id: 17,
     title: 'Fisicoquímica',
     author: 'Peter Atkins',
-    image: '/images/quimica5.webp',
+    image: '/images/default-book.jpg',
     category: 'Fisicoquímica'
   },
   {
     id: 18,
     title: 'Química Ambiental',
     author: 'Colin Baird',
-    image: '/images/quimica6.jpg',
+    image: '/images/default-book.jpg',
     category: 'Química Ambiental'
   },
   {
     id: 19,
     title: 'Química de los Polímeros',
     author: 'Paul C. Hiemenz',
-    image: '/images/quimica1.webp',
+    image: '/images/default-book.jpg',
     category: 'Química de Materiales'
   },
   {
     id: 20,
     title: 'Química Cuántica',
     author: 'Ira N. Levine',
-    image: '/images/quimica2.webp',
+    image: '/images/default-book.jpg',
     category: 'Química Cuántica'
   },
   {
     id: 21,
     title: 'Química Farmacéutica',
     author: 'Graham L. Patrick',
-    image: '/images/quimica3.jpg',
+    image: '/images/default-book.jpg',
     category: 'Química Farmacéutica'
   },
   {
     id: 22,
     title: 'Química de los Alimentos',
     author: 'H.D. Belitz',
-    image: '/images/quimica4.jpg',
+    image: '/images/default-book.jpg',
     category: 'Química de Alimentos'
   },
   {
     id: 23,
     title: 'Química Nuclear',
     author: 'Gerhart Friedlander',
-    image: '/images/quimica6.jpg',
+    image: '/images/default-book.jpg',
     category: 'Química Nuclear'
   },
   {
     id: 24,
     title: 'Química Industrial',
     author: 'James A. Kent',
-    image: '/images/quimica5.webp',
+    image: '/images/default-book.jpg',
     category: 'Química Industrial'
   }
 ];
