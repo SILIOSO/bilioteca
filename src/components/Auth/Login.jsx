@@ -46,7 +46,7 @@ const Login = ({ onLogin }) => {
         {error && <div className="error-message">{error}</div>}
         
         <form onSubmit={handleSubmit}>
-          <div className="form-group">
+          <div className="correo1">
             <input
               type="email"
               name="correo"
@@ -57,7 +57,7 @@ const Login = ({ onLogin }) => {
             />
           </div>
           
-          <div className="form-group">
+          <div className="correo1">
             <input
               type="password"
               name="contraseña"

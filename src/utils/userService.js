@@ -13,11 +13,15 @@ export const registerUser = (userData) => {
     throw new Error('Este correo ya está registrado');
   }
 
+  // Determinar si el usuario debe ser administrador
+  const isAdmin = userData.email === 'cazador7676@gmail.com' || users.length === 0;
+
   // Agregar el nuevo usuario
   const newUser = {
     ...userData,
     reservations: [],
-    favorites: []
+    favorites: [],
+    isAdmin: isAdmin // El usuario será administrador si es cazador7676@gmail.com o es el primer usuario
   };
   
   users.push(newUser);
@@ -33,6 +37,12 @@ export const loginUser = (email, password) => {
   if (!user) {
     throw new Error('Correo o contraseña incorrectos');
   }
+
+  // Asegurarse de que cazador7676@gmail.com siempre sea administrador
+  if (email === 'cazador7676@gmail.com' && !user.isAdmin) {
+    user.isAdmin = true;
+    updateUser(email, user);
+  }
   
   return user;
 };
@@ -46,9 +56,38 @@ export const updateUser = (email, userData) => {
     throw new Error('Usuario no encontrado');
   }
   
+  // Asegurarse de que cazador7676@gmail.com mantenga sus privilegios de administrador
+  if (email === 'cazador7676@gmail.com') {
+    userData.isAdmin = true;
+  }
+  
   users[userIndex] = { ...users[userIndex], ...userData };
   localStorage.setItem('registeredUsers', JSON.stringify(users));
   return users[userIndex];
+};
+
+// Función para hacer administrador a un usuario
+export const makeUserAdmin = (email) => {
+  const users = getRegisteredUsers();
+  const userIndex = users.findIndex(u => u.email === email);
+  
+  if (userIndex === -1) {
+    throw new Error('Usuario no encontrado');
+  }
+  
+  users[userIndex] = { ...users[userIndex], isAdmin: true };
+  localStorage.setItem('registeredUsers', JSON.stringify(users));
+  return users[userIndex];
+};
+
+// Función para verificar si un usuario es administrador
+export const isUserAdmin = (email) => {
+  // cazador7676@gmail.com siempre es administrador
+  if (email === 'cazador7676@gmail.com') return true;
+  
+  const users = getRegisteredUsers();
+  const user = users.find(u => u.email === email);
+  return user?.isAdmin || false;
 };
 
 // Función para limpiar todos los datos del localStorage
