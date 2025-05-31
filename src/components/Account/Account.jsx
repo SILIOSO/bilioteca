@@ -21,7 +21,7 @@ const Account = ({ isAuthenticated, userData }) => {
 
   // Obtener préstamos activos (reservas con estado ACTIVA)
   const activeLoans = (userData?.reservations || []).filter(
-    reservation => reservation.status === 'ACTIVA'
+    reservation => reservation.status === 'APROBADA'
   );
 
   // Calcular días restantes para cada préstamo

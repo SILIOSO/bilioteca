@@ -735,7 +735,7 @@ const AdminPanel = ({ isAuthenticated, userData }) => {
                   <p>Estado: <span className={`status-badge ${reserva.status.toLowerCase()}`}>{reserva.status}</span></p>
                 </div>
               </div>
-              <div className="reservation-actions">
+              <div className="">
                 {reserva.status === 'PENDIENTE' && (
                   <>
                     <button 
